@@ -5,4 +5,3 @@ export interface Joc{
     disponible: boolean;
     descripcio?: string;
 }
-dfdsfsd

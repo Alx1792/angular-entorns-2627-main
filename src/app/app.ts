@@ -2,6 +2,8 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Producte } from './interfaces/producte';
 import { Producte as ProducteClass } from './producte';
+import { Joc } from './interfaces/joc';
+import { Joc as JocClass } from './joc';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -76,4 +78,21 @@ export class App {
     console.log(this.p1.toString());
     console.log(this.p1.getpreuAmbIva());
   }
+  joc1 = new JocClass(1, 'Minecraft', 29.99, true);
+  joc2 = new JocClass(2, 'Call of Duty', 39.99, false, 'Joc de guerra en primera persona');
+  joc3 = new JocClass(3, 'FIFA 23', 59.99, true, 'Joc de futbol');
+  joc4 = new JocClass(4, 'The Witcher 3', 49.99, true, 'Joc de rol i acció');
+  joc5 = new JocClass(5, 'Cyberpunk 2077', 59.99, false, 'Joc de rol i acció en un món futurista');
+  jocs: JocClass[] = [this.joc1, this.joc2, this.joc3, this.joc4, this.joc5];
+
+  getActius(): boolean {
+    return true;
+  }
+  findById(id: number): JocClass | undefined {
+    return this.jocs.find(joc => joc.id === id);
+  }
+  formatarElement(joc: JocClass   ): string {
+    return `Nom: ${joc.nom}, Preu: ${joc.preu}€, Disponible: ${joc.disponible ? 'Sí' : 'No'}, Descripció: ${joc.descripcio ?? 'No disponible'}`;
+  }
+
 }
