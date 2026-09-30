@@ -4,9 +4,11 @@ import { Producte } from './interfaces/producte';
 import { Producte as ProducteClass } from './producte';
 import { Joc } from './interfaces/joc';
 import { Alumne } from './alumne';
+import { Tarjeta } from './components/targeta/tarjeta';
+import { Perfil } from './components/perfil/perfil';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,Tarjeta,Perfil],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

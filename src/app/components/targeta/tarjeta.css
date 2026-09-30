@@ -1,0 +1,16 @@
+/* Aquest fitxer conte els ESTILS ENCAPSULATS---> nomes afecta aquest component 
+.titol ---> en aquest component
+.titol (app.css) --> OK, NO HI HA CONFLICTE*/
+.tarjeta{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: 250px;
+    display: inline-block;
+}
+h2 {
+    color:blue;
+    font-size: 1.1rem;
+}
+/*COM MOSTRO AQUEST COMPONENT A L'HTML*/
