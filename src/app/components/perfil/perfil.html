@@ -1,8 +1,28 @@
 <div class="perfil">
-<label for="nom"><strong>Nom i congoms:</strong></label>
-<p id="nom">Eustaqio Jimenes Paquin</p>
-<label for="edat"><strong>Edat:</strong></label>
-<p id="edat">30</p>
-<label for="presentacio"><strong>Presentació:</strong></label>
-<p id="presentacio">Hola, sóc Eustaqio Jimenes Paquin, m'agrada Nude Project, tinc una germana que es diu Eustaquia i vivim a Sidamon</p>
+  <label for="nom"><strong>Nom i cognoms:</strong></label>
+  <p id="nom">{{ nom }} {{ cognom }}</p>
+
+  <label for="edat"><strong>Edat:</strong></label>
+  <p id="edat">{{ edat }}</p>
+
+  <label for="cicle"><strong>Cicle:</strong></label>
+  <p id="cicle">{{ cicle }}</p>
+
+  <label><strong>Major d'edat:</strong></label>
+  <p>{{ edat >= 18 ? 'Sí' : 'No' }}</p>
+
+  <label><strong>Any de naixement:</strong></label>
+  <p>{{ 2026 - edat }}</p>
+
+  <label><strong>Nom i cognom en majúscules:</strong></label>
+  <p>{{ (nom + ' ' + cognom).toUpperCase() }}</p>
+
+  <label><strong>Nom complet:</strong></label>
+  <p>{{ nomComplet }}</p>
+
+  <label><strong>Inicials:</strong></label>
+  <p>{{ inicials }}</p>
+
+  <label><strong>Generació:</strong></label>
+  <p>{{ generacio }}</p>
 </div>
