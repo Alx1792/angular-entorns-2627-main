@@ -1,8 +1,25 @@
 
 
-<h2>El perfil</h2>
-<app-tarjeta></app-tarjeta>
-<app-tarjeta></app-tarjeta>
-<app-perfil></app-perfil>
-<app-perfil></app-perfil>
-<router-outlet />
+<h2> El meu cataleg</h2>
+
+<!--Amb for -->
+@for (ciutat of ciutats; track ciutat){
+    <p> {{ciutat}} </p>
+}
+<!--index es una variable especial que conte la posicio de l'element, començant per 0 -->
+@for(ciutat of ciutats; track ciutat; let i= $index){
+    <p> {{i+1}}. {{ciutat}} </p>
+}
+<!-- @empty -->
+ @for(ciutat of ciutats; track ciutat){
+    p {{ciutat}} </p>
+
+ }@empty{
+    <p> No hi ha cap ciutat </p>
+ }
+
+@for(producte of productes; track producte.id; let i=$index){
+    <p> {{i+1}}. {{producte.nom}}</p>
+    <app-tarjeta></app-tarjeta>
+}
+<router-outlet/>

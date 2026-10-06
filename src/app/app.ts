@@ -6,9 +6,10 @@ import { Joc } from './interfaces/joc';
 import { Alumne } from './alumne';
 import { Tarjeta } from './components/targeta/tarjeta';
 import { Perfil } from './components/perfil/perfil';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Tarjeta,Perfil],
+  imports: [RouterOutlet,ProducteClass],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -117,5 +118,23 @@ export class App {
     console.log(this.alumne1.haAprobat);
     console.log(this.alumne2.presentar());
     console.log(this.alumne2.haAprobat);
-  }*/
+  }
+ ciutats: string[] = ['Lleida', 'Barcelona', 'Madrid', 'Valencia', 'Sevilla']; 
+*/
+productes: Producte[] = [{
+  id: 1,
+    nom: 'PC',
+    preu: 999,
+    estoc: 10,
+    categoria: 'Electronics'
+  },
+{
+    id: 2,
+    nom: 'Portatil',
+    preu: 1299,
+    estoc: 5,
+    categoria: 'Electronics'
+  }]
 }
+
+
