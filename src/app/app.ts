@@ -29,7 +29,7 @@ export class App {
   /*saluda(40)--> Argument of type 'number' is not assignable to parameter of type 'string'*/
 
   //TIPUS BASICS
-  nom: string = 'Angular';
+  /*nom: string = 'Angular';
   nom2: string = 'Laravel';
   versio: number = 20;
   actiu: boolean = true;
@@ -75,7 +75,7 @@ export class App {
       descripcio: 'Aquest es el producte numero 2'
     }
   ];*/
-  p1 = new ProducteClass('PC', 999);
+  /*p1 = new ProducteClass('PC', 999);
 
   joc1: Joc = { id: 1, nom: 'Minecraft', preu: 29.99, disponible: true };
   joc2: Joc = {
@@ -117,5 +117,5 @@ export class App {
     console.log(this.alumne1.haAprobat);
     console.log(this.alumne2.presentar());
     console.log(this.alumne2.haAprobat);
-  }
+  }*/
 }

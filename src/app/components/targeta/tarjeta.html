@@ -1,5 +1,17 @@
+<!--<div class="tarjeta">
+    <h2> {{nom}}</h2>
+    <p>Preu: {{preu}}€</p>
+    <p>Disponible: {{estoc}} unitats</p>
+    <p> Preu amb iva: {{preu * 1.21}}€</p>
+    <p> {{estoc > 0 ? 'En stock' : 'No disponible'}} </p>
+    <p>Nom en majuscules: {{nom.toUpperCase()}}</p>
+</div>-->
+
 <div class="tarjeta">
-    <h2> Ordinador gamer pro</h2>
-    <p>Preu: 1299€</p>
-    <p>Disponible</p>
-</div>
+    <h2> {{producte.nom}}</h2>
+    <p>Categoria: {{producte.categoria}}</p>
+    <p>Preu: {{producte.preu}}€ + IVA: {{preuAmbIva}}€</p>
+    <p>Disponible: {{producte.estoc}} unitats</p>
+    
+    <p> {{estatDisponibilitat}} </p>
+    <p>Nom en majuscules: {{producte.nom.toUpperCase()}}</p>
