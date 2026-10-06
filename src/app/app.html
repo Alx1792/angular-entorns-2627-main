@@ -12,7 +12,7 @@
 }
 <!-- @empty -->
  @for(ciutat of ciutats; track ciutat){
-    p {{ciutat}} </p>
+    <p> {{ciutat}} </p>
 
  }@empty{
     <p> No hi ha cap ciutat </p>
@@ -20,6 +20,13 @@
 
 @for(producte of productes; track producte.id; let i=$index){
     <p> {{i+1}}. {{producte.nom}}</p>
-    <app-tarjeta></app-tarjeta>
+    <app-tarjeta/>
+}
+
+
+<!--Crea un array de minim 5 elements al app.ts usa for per mostrar els elements de l'array
+$index per mostrar l'ordre -->
+@for(gelat of gelats; track gelat; let i=$index){
+    <p> {{i+1}}. {{gelat}}</p>
 }
 <router-outlet/>

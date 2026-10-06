@@ -9,7 +9,7 @@ import { Perfil } from './components/perfil/perfil';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,ProducteClass],
+  imports: [RouterOutlet,Tarjeta],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -119,8 +119,9 @@ export class App {
     console.log(this.alumne2.presentar());
     console.log(this.alumne2.haAprobat);
   }
+    */
  ciutats: string[] = ['Lleida', 'Barcelona', 'Madrid', 'Valencia', 'Sevilla']; 
-*/
+
 productes: Producte[] = [{
   id: 1,
     nom: 'PC',
@@ -135,6 +136,16 @@ productes: Producte[] = [{
     estoc: 5,
     categoria: 'Electronics'
   }]
+
+
+
+  gelats : string[] = [
+    'Maduixa',
+    'Coco',
+    'Mango',
+    'Pinya',
+    'Vainilla'
+  ];
+
+
 }
-
-
