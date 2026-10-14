@@ -1,10 +1,12 @@
 //Aquest fitxer conte la logica de la targeta, es a dir, el codi que fa que la targeta funcioni. Aquest fitxer es un component de Angular, i per tant, es una classe que conte les propietats i metodes que fan que la targeta funcioni. Aquesta classe es exportada per poder ser utilitzada en altres parts de l'aplicacio.
 import { Component } from '@angular/core';
 import { Producte } from '../../interfaces/producte';
+import { Producte2 } from '../../interfaces/producte2';
+import { NgClass } from '../../../../node_modules/@angular/common/types/_common_module-chunk';
 
 @Component({
   selector: 'app-tarjeta', /* Per usar-lo a l'HTML d'altres components, com una etiqueta HMTL personalitzada*/ 
-  imports: [],
+  imports: [NgClass],
   templateUrl: './tarjeta.html',
   styleUrl: './tarjeta.css',
 })
@@ -36,6 +38,25 @@ amb {{nom}} --> el valor pot canviar i l'html s'actualitzara automaticament, har
  Al template s'usa com una propietat, sense parentesis {{nomDElGetter}}.
 */
 
+
+/*AFEGIR ETIQUETA OFERTA I GRATUIT 
+Si el preu es inferior a 20 --> oferta
+si el preu es 0 --> gratis
+si el preu es superior a 100 --> premium
+
+
+
+
+
+
+
+
+if find d'un for per marcar productes especials
+
+si la categoria es informatica --> div amb "destacat"
+*/
+
+
 //Getter1: preu amb IVA del 21%
  get preuAmbIva(): number {
   return this.producte.preu * 1.21;
@@ -51,6 +72,17 @@ else if (this.producte.estoc<5){
 return 'Disponible';
 
 }
+producteXIf: Producte2 = {
+  id: 1,
+  nom: 'Castanya',
+  preu: 12,
+  estoc: 60,
+  categoria : 'Aliment',
+  descripcio: 'Castanyes ben bones'
+}
 
-
+mostrarDesc = true;
+toggleDesc(): void { /*funcio amb el boto*/
+this.mostrarDesc = !this.mostrarDesc;
+}
 }

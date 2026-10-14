@@ -6,10 +6,11 @@ import { Joc } from './interfaces/joc';
 import { Alumne } from './alumne';
 import { Tarjeta } from './components/targeta/tarjeta';
 import { Perfil } from './components/perfil/perfil';
+import { Info } from './components/info/info';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Tarjeta],
+  imports: [RouterOutlet, Tarjeta, Info],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

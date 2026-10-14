@@ -13,5 +13,34 @@
     <p>Preu: {{producte.preu}}€ + IVA: {{preuAmbIva}}€</p>
     <p>Disponible: {{producte.estoc}} unitats</p>
     
-    <p> {{estatDisponibilitat}} </p>
+    @if (producte.estoc >0) {
+        <p>En stock</p>
+    } 
     <p>Nom en majuscules: {{producte.nom.toUpperCase()}}</p>
+</div>
+<div class="tarjeta">
+    <h2> {{producteXIf.nom}}</h2>
+    <p>Categoria: {{producteXIf.categoria}}</p>
+    <p>Preu: {{producteXIf.preu}}€ + IVA: {{preuAmbIva}}€</p>
+    <p>Disponible: {{producteXIf.estoc}} unitats</p>
+    
+    <button (click)="toggleDesc()">
+        {{mostrarDesc ? 'TANCAR' : 'VEURE'}}
+
+    </button>
+    @if (mostrarDesc) {
+        <p>Descripció: {{producteXIf.descripcio}}</p>
+    }
+    <p>Nom en majuscules: {{producteXIf.nom.toUpperCase()}}</p>
+
+    @if (producteXIf.preu< 20) {
+        <p>Oferta</p>
+    }
+    @else if (producteXIf.preu ===0) {
+        <p>Gratis</p>
+    }
+    @else if (producteXIf.preu > 100) {
+        <p>Premium</p>
+    }
+
+</div>
